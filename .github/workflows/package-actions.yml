@@ -49,6 +49,11 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - run: npm ci
       - name: Release
+        run: |
+          echo "GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}"
+          echo "NPM_TOKEN: ${{ secrets.NPM_TOKEN }}"
+          echo "NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}"
+        
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
