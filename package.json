@@ -1,5 +1,5 @@
 {
-  "name": "@guilhermeagouveia/editorjs-image-resize-and-crop",
+  "name": "@guilhermeagouveia/editorjs-image-resize-crop",
   "private": false,
   "version": "0.0.1",
   "license": "MIT",
@@ -30,5 +30,13 @@
   "repository": {
     "type": "git",
     "url": ""
-  }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "description": "Tool to resize and crop images in editorjs",
+  "keywords": [
+    "editorjs"
+  ],
+  "author": "GuilhermeAGouveia"
 }

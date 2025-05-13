@@ -26,5 +26,5 @@
     "resolveJsonModule": true,
     "esModuleInterop": true
   },
-  "include": ["src", "src/**/*.d.ts", "index.d.ts"]
+  "include": ["src", "src/**/*.d.ts", "src/types/types.d.ts"]
 }
