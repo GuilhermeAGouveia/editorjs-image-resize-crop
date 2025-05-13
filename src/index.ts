@@ -3,7 +3,6 @@ import Cropper from 'cropperjs';
 import 'cropperjs/dist/cropper.css';
 import './index.css';
 
-
 export interface TuneSetting {
   name: string;
   icon: string;
@@ -631,11 +630,7 @@ export default class ImageToolTune {
    * @public
    * @return {void}
    * */
-  resizeClick(
-    blockContent: HTMLElement,
-    _: HTMLElement,
-    e: MouseEvent,
-  ): void {
+  resizeClick(blockContent: HTMLElement, _: HTMLElement, e: MouseEvent): void {
     const maxWidth =
       document.getElementsByClassName('codex-editor')[0].clientWidth;
 
@@ -654,7 +649,7 @@ export default class ImageToolTune {
     };
 
     const mouseUpHandler = () => {
-      let blockWidth = parseInt(
+      const blockWidth = parseInt(
         window.getComputedStyle(blockContent).width,
         10,
       );
