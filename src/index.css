@@ -1,0 +1,229 @@
+.cdx-image-tool-tune--floatLeft .cdx-block,
+.cdx-image-tool-tune--center .cdx-block,
+.cdx-image-tool-tune--floatRight .cdx-block,
+.cdx-image-tool-tune--floatLeft .image-tool__image,
+.cdx-image-tool-tune--center .image-tool__image,
+.cdx-image-tool-tune--floatRight .image-tool__image,
+.cdx-image-tool-tune--floatLeft .cdx-block,
+.cdx-image-tool-tune--center .cdx-block,
+.cdx-image-tool-tune--floatRight .cdx-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cdx-settings-button--active {
+  background: theme('colors.primary-content');
+  color: theme('colors.primary');
+}
+
+.cdx-settings-button:hover {
+  background: theme('colors.primary-content');
+}
+
+.cdx-image-tool-tune--center {
+  display: flex;
+  justify-content: center;
+}
+
+@media all and (min-width: 470px) {
+  .codex-editor:not(.read-only)
+    .cdx-image-tool-tune--floatLeft.ce-block__content,
+  .codex-editor:not(.read-only)
+    .cdx-image-tool-tune--floatRight.ce-block__content {
+    min-height: 20px;
+  }
+
+  .cdx-image-tool-tune--floatLeft.ce-block__content .image-tool__image,
+  .cdx-image-tool-tune--floatRight.ce-block__content .image-tool__image {
+    margin-top: 40px;
+  }
+  .cdx-image-tool-tune--floatLeft.ce-block__content .image-tool__image {
+    margin-left: 20px;
+  }
+  .cdx-image-tool-tune--floatRight.ce-block__content .image-tool__image {
+    margin-right: 20px;
+  }
+
+  .cdx-image-tool-tune--floatLeft.ce-block__content .cdx-input,
+  .cdx-image-tool-tune--floatRight.ce-block__content .cdx-input {
+    width: calc(100% - 20px);
+  }
+  .cdx-image-tool-tune--floatLeft.ce-block__content .cdx-input {
+    margin-left: 20px;
+  }
+  .cdx-image-tool-tune--floatRight.ce-block__content .cdx-input {
+    margin-right: 20px;
+  }
+
+  .cdx-image-tool-tune--floatLeft .cdx-block {
+    float: left;
+    margin-right: 10px;
+  }
+
+  .cdx-image-tool-tune--floatRight .cdx-block {
+    float: right;
+    margin-left: 10px;
+  }
+
+  .cdx-image-tool-tune--sizeSmall .cdx-block {
+    max-width: 25% !important;
+  }
+  .cdx-image-tool-tune--sizeMiddle .cdx-block {
+    max-width: 50% !important;
+  }
+  .cdx-image-tool-tune--sizeLarge .cdx-block {
+    max-width: 75% !important;
+  }
+}
+
+.cdx-image-tool-tune--sizeLarge img {
+  object-fit: cover;
+  max-width: 100%;
+}
+.cdx-image-tool-tune--sizeSmall img {
+  object-fit: cover;
+  max-width: 100%;
+}
+.cdx-image-tool-tune--sizeMiddle img {
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.codex-editor.read-only .cdx-input.image-tool__caption:empty,
+.read-only > .codex-editor .cdx-input.image-tool__caption:empty {
+  display: none;
+}
+
+.cdx-image-tool-tune--resize .cdx-block {
+  position: relative;
+  overflow: visible;
+}
+
+.cdx-image-tool-tune--resize .cdx-block .resizable {
+  display: none;
+}
+
+.cdx-image-tool-tune--resize .image-tool__image-picture {
+  width: 100% !important;
+}
+.cdx-image-tool-tune--resize .cdx-block:hover .resizable {
+  display: block;
+}
+
+.cdx-image-tool-tune--resize .cdx-block .resizable .resizers .resizer {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  border: 3px solid #4286f4;
+  position: absolute;
+}
+
+.cdx-image-tool-tune--resize .cdx-block .resizable .resizers .resizer.top-left {
+  left: -5px;
+  top: -5px;
+  cursor: nwse-resize;
+  /*resizer cursor*/
+}
+
+.cdx-image-tool-tune--resize
+  .cdx-block
+  .resizable
+  .resizers
+  .resizer.top-right {
+  right: -5px;
+  top: -5px;
+  cursor: nesw-resize;
+}
+
+.cdx-image-tool-tune--resize
+  .cdx-block
+  .resizable
+  .resizers
+  .resizer.bottom-left {
+  left: -5px;
+  bottom: -5px;
+  cursor: nesw-resize;
+}
+
+.cdx-image-tool-tune--resize
+  .cdx-block
+  .resizable
+  .resizers
+  .resizer.bottom-right {
+  right: -5px;
+  bottom: -5px;
+  cursor: nwse-resize;
+}
+
+.cdx-image-tool-tune--crop:hover,
+.cdx-image-tool-tune--crop.isCropping,
+.cdx-image-tool-tune--resize:hover {
+  z-index: 2;
+}
+
+.cdx-image-tool-tune--crop .image-tool__image {
+  position: relative;
+}
+
+.cdx-image-tool-tune--crop .isCropping .image-tool__image {
+  min-height: 600px;
+  min-width: 100%;
+}
+
+.cdx-image-tool-tune--crop .image-tool__image .crop-btn,
+.cdx-image-tool-tune--crop .image-tool__image .crop-save {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 7px;
+  background: #4286f4;
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.cdx-image-tool-tune--crop .image-tool__image:hover .crop-btn,
+.cdx-image-tool-tune--crop .image-tool__image:hover .crop-save {
+  display: block;
+}
+
+.cdx-image-tool-tune--crop .image-tool__image img.isCropped {
+  position: absolute;
+  min-width: unset;
+  max-width: unset;
+  min-height: unset;
+  max-height: unset;
+}
+
+.cdx-image-tool-tune--crop .cdx-block.image-tool.isCropping {
+  min-width: unset !important;
+  max-width: unset !important;
+  min-height: unset !important;
+  max-height: unset !important;
+}
+
+.ce-block {
+  margin: 0.8em 0;
+}
+.ce-toolbar {
+  z-index: 3;
+}
+
+.image-tool__caption {
+  background-color: white;
+}
+.image-tool {
+  position: relative;
+  z-index: 1;
+}
+
+.cdx-image-tool-tune {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
