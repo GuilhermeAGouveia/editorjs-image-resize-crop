@@ -24,7 +24,8 @@
 
     /* Custom */
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "typeRoots": ["./dist/index.d.ts", "node_modules/@types"]
   },
   "include": ["src", "src/**/*.d.ts", "src/types/types.d.ts"]
 }

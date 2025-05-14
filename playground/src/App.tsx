@@ -2,7 +2,7 @@ import type { BlockToolConstructable, OutputData } from '@editorjs/editorjs';
 import ImageTool from '@editorjs/image';
 import { useEditorJS } from './useEditorJS';
 import { useState } from 'react';
-import ImageToolTune from 'editorjs-image-resize-crop';
+import {ImageToolTune} from 'editorjs-image-resize-crop';
 
 export default function App() {
   const [data, setData] = useState<OutputData>({
