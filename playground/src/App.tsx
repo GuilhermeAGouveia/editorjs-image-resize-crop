@@ -1,9 +1,8 @@
-import type { BlockToolConstructable, OutputData } from '@editorjs/editorjs'
-import ImageTool from '@editorjs/image'
-import { useEditorJS } from './useEditorJS'
+import type { BlockToolConstructable, OutputData } from '@editorjs/editorjs';
+import ImageTool from '@editorjs/image';
+import { useEditorJS } from './useEditorJS';
 import { useState } from 'react';
-import ImageToolTune from 'editorjs-image-resize-crop'
-
+import ImageToolTune from 'editorjs-image-resize-crop';
 
 export default function App() {
   const [data, setData] = useState<OutputData>({
@@ -25,16 +24,14 @@ export default function App() {
         },
       },
       tunes: ['imageTune'],
-      
     },
-  }
+  };
 
   const { setElement } = useEditorJS({
-    onChange: (data) => setData(data),
+    onChange: data => setData(data),
     data: data,
     tools,
   });
-
 
   return (
     <div
@@ -50,16 +47,14 @@ export default function App() {
   );
 }
 
-  const uploadByFile = (file: File) => {
-    console.log(file);
-    return new Promise((resolve, reject) => {
-      resolve({
-        success: 1,
-        file: {
-          url: URL.createObjectURL(file),
-        },
-      });
+const uploadByFile = (file: File) => {
+  console.log(file);
+  return new Promise(resolve => {
+    resolve({
+      success: 1,
+      file: {
+        url: URL.createObjectURL(file),
+      },
     });
-  }
-
-
+  });
+};

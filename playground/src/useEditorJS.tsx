@@ -1,15 +1,11 @@
 import EditorJS from '@editorjs/editorjs';
-import type {
-    EditorConfig,
-    OutputData,
-  } from '@editorjs/editorjs';
+import type { EditorConfig, OutputData } from '@editorjs/editorjs';
 
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 type useEditorProps = {
   onChange?: (value: OutputData) => void;
 } & Omit<EditorConfig, 'onChange'>;
-
 
 export const DEFAULT_EDITORJS_DATA = {
   blocks: [],
@@ -31,7 +27,9 @@ export const useEditorJS = ({
       await instance.current.isReady;
       try {
         instance.current.destroy();
-      } catch (err) {}
+      } catch (err) {
+        console.error(err);
+      }
       instance.current = null;
     }
   }, []);
@@ -47,8 +45,6 @@ export const useEditorJS = ({
           await instance.current?.isReady;
           onReady?.();
         },
-
-       
       });
     },
     [data, editorProps, onChange, onReady, readOnly],
@@ -57,10 +53,6 @@ export const useEditorJS = ({
   useEffect(() => {
     if (instance.current === null && element) init(element);
   }, [element, init]);
-
-  
-
-
 
   useEffect(() => {
     return () => {
