@@ -1,6 +1,7 @@
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import { name } from './package.json';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 export default defineConfig({
   build: {
@@ -14,5 +15,5 @@ export default defineConfig({
     sourcemap: true, // Generates source maps for debugging.
     emptyOutDir: true, // Clears the output directory before building.
   },
-  plugins: [dts({ entryRoot: 'src' })], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
+  plugins: [dts({ entryRoot: 'src' }), libInjectCss()], // Uses the 'vite-plugin-dts' plugin for generating TypeScript declaration files (d.ts).
 });
