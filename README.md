@@ -116,9 +116,9 @@ interface ImageToolTuneData {
 }
 ```
 
-## Dependências
+## Dependencies
 - Editor.js (^2.30.8)
 - Cropper.js (1.5)
 
-## Licença
+## License
 - MIT
