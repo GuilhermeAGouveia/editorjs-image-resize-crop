@@ -1,6 +1,6 @@
 ![](https://badgen.net/badge/Editor.js/v2.0/blue)
 
-# Image resize and crop tune 
+# Image resize and crop tune
 
 Provides Image Tune for the [Editor.js](https://editorjs.io).
 
