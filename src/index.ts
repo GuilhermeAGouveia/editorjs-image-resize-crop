@@ -52,7 +52,6 @@ export default class ImageToolTune {
   private settings: TuneSetting[];
   private api: API;
   private block: BlockAPI;
-  private _config: ImageToolTuneConfig | undefined;
   private data: ImageToolTuneData;
   private wrapper: HTMLElement | undefined;
   private buttons: HTMLElement[];
@@ -76,8 +75,6 @@ export default class ImageToolTune {
 
     this.api = api;
     this.block = block;
-    this._config = config;
-    console.log(this._config);
     this.data = {
       floatLeft: data?.floatLeft ?? false,
       floatRight: data?.floatRight ?? false,

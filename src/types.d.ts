@@ -21,4 +21,3 @@ declare module '@editorjs/editorjs' {
     dispatchChange(): void;
   }
 }
-
