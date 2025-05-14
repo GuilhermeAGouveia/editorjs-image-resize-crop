@@ -35,7 +35,7 @@ $ pnpm add editorjs-image-resize-crop
 Once the package is installed, you can import the library using `import` or `require` approach:
 
 ```js
-import ImageTune from 'editorjs-image-resize-crop';
+import ImageTuneTool from 'editorjs-image-resize-crop';
 ```
 
 ### Source code
@@ -89,7 +89,7 @@ const editor = new EditorJS({
 | resize         | `boolean` | should start with resize enable |
 | caption        | `boolean` | should start with crop enable   |
 
-
+Example:
 
 ```js
 imageTune: {
