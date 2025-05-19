@@ -12,13 +12,18 @@
   align-items: center;
 }
 
+:root {
+  --primary: #2492F5;
+  --primary-content: #E9F4FE;
+}
+
 .cdx-settings-button--active {
-  background: theme('colors.primary-content');
-  color: theme('colors.primary');
+  background: var(--primary-content);
+  color: var(--primary);
 }
 
 .cdx-settings-button:hover {
-  background: theme('colors.primary-content');
+  background: var(--primary-content);
 }
 
 .cdx-image-tool-tune--center {
@@ -115,8 +120,8 @@
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: white;
-  border: 3px solid #4286f4;
+  background: var(--primary-content);
+  border: 3px solid var(--primary);
   position: absolute;
 }
 
@@ -178,8 +183,8 @@
   top: 0;
   left: 0;
   padding: 7px;
-  background: #4286f4;
-  color: white;
+  background: var(--primary);
+  color: var(--primary-content);
   text-align: center;
   line-height: 20px;
   cursor: pointer;

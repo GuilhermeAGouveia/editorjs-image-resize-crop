@@ -74,7 +74,7 @@ const editor = new EditorJS({
       class: ImageToolTune,
       config: {
         resize: true,
-        crop: true
+        crop: false
       }
     }
   }
@@ -94,7 +94,7 @@ Example:
 ```js
 imageTune: {
       class: ImageToolTune as BlockToolConstructable,
-      config: { resize: true, crop: true },
+      config: { resize: true, crop: false },
 },
 ```
 
